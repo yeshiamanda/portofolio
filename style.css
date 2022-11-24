@@ -202,5 +202,105 @@ a {
    }
 
    .form-group {
-    
+    display: grid;
+    grid-template-coloums: repeat(2, 1fr);
+    coloum-gap: 32px;
+    margin-top: 32px;
+    grid-temlplate-areas: "name subject"
+        "email phone"
+        "message message"
+   }
+
+   #input-name {
+    grid-area: name;
+   }
+
+   #input-subject {
+    grid-area: subject;
+   }
+
+   #input-phone {
+    grid-area: phone;
+   }
+
+   .input-group {
+    display: flex;
+    flex-direction: colum;
+    margin-bottom: 32px;
+   }
+
+   .input-group label {
+    font-weight: 700;
+    margin-bottom: 16px;
+    font-sise: 24px;
+   }
+
+   .input-group input {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    font-size: 20px;
+   }
+
+   .input-group input:focus{
+    border-bottom: 2px solid #FFC108;
+   }
+
+   /* footer section style */
+   footer {
+    padding: 16px 128px;
+    background-color: #FFC108;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   }
+
+   footer p {
+    color: white;
+    width: 50%
+   }
+   .social-icon {
+    display: flex;
+    gap: 32px;
+   }
+
+   @media only screen and (max-width: 1200px) {
+    .service-detail {
+      gap: 24px;
+    }
+
+    .contact-detail {
+      gap: 24px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: colum;
+    }
+   }
+
+   @media only screen and (max-width: 992px) {
+    #header,
+    #footer {
+      padding: 16px 32px;
+    }
+
+    landing {
+      flex-direction: colum-reverse;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    #landing>div {
+      width: 100%;
+    }
+
+    #about {
+      flex-direction: colum;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+    }
    }
